@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "NZkOut9gAOUQWb7Z4mcRzTzj1m3iWVbv22hA/hfJrapfLDy63yWKRYx6AaQXMZvUKxwxvDG48JJ4fSwWhL+Zrg==",
+  "dgSpecHash": "UEFfJP/saoLQwgBOM4RjvgXtHlW1tFj46zG0dIg2tVHIu1nLOMlWuFgPAmX7WTGJdpac57mKcpPymB+bXSjH4Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\rgvas\\source\\repos\\AzureCacheFundamentals\\RedisCache\\RedisCache.csproj",
   "expectedPackageFiles": [
