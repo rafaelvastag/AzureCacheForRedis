@@ -1,7 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
-using RedisCache.Models;
+﻿
+using Microsoft.EntityFrameworkCore;
+using RedisCache.Function.Models;
 
-namespace RedisCache.Data
+namespace RedisCache.Function
 {
     public class ApplicationDbContext : DbContext
     {
