@@ -4,7 +4,6 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Azure.WebJobs.ServiceBus;
 using Microsoft.Extensions.Logging;
-using ServiceBus.Functions.Models;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +13,7 @@ namespace ServiceBus.Functions
     {
         [return: ServiceBus("checkoutmessagetopic", ServiceBusEntityType.Topic)]
         [FunctionName("ServiceBusExample")]
-        public static async Task<ResponseDTO> Run(
+        public static async Task<ServiceBusMessage> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
@@ -27,8 +26,8 @@ namespace ServiceBus.Functions
                 log.LogInformation($"Message body : {body}");
             }
             log.LogInformation($"SendMessage processed.");
-            var message = new ResponseDTO("Response OK", body,headers["HEADER_VASTAG"]);
-
+            var message = new ServiceBusMessage(body);
+            message.ApplicationProperties.Add("token", headers["token"].ToString());
             return message;
         }
 

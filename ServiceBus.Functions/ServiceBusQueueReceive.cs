@@ -1,4 +1,5 @@
 using System;
+using Azure.Messaging.ServiceBus;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Host;
 using Microsoft.Extensions.Logging;
@@ -9,9 +10,9 @@ namespace ServiceBus.Functions
     public static class ServiceBusQueueReceive
     {
         [FunctionName("ServiceBusQueueReceive")]
-        public static void Run([ServiceBusTrigger("checkoutmessagetopic", "vastagOrderSubscription", Connection = "AzureWebJobsServiceBus")] ResponseDTO mySbMsg, ILogger log)
+        public static void Run([ServiceBusTrigger("checkoutmessagetopic", "vastagOrderSubscription", Connection = "AzureWebJobsServiceBus")] ServiceBusReceivedMessage mySbMsg, ILogger log)
         {
-            log.LogInformation($"C# ServiceBus topic trigger function processed message: {mySbMsg}");
+            log.LogInformation($"C# ServiceBus topic trigger function processed TOKEN: {mySbMsg.ApplicationProperties["token"]}");
         }
     }
 }
