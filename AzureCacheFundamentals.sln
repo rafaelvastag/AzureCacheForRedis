@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedisCache.Function", "Redi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceBus.Functions", "ServiceBus.Functions\ServiceBus.Functions.csproj", "{9367FFB3-4F9D-4AC3-AF6D-99A68237062F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JwtToken.Function", "JwtToken.Function\JwtToken.Function.csproj", "{6D56219A-2F5C-49EC-9BBA-1844A4174D43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JwtToken.Function", "JwtToken.Function\JwtToken.Function.csproj", "{6D56219A-2F5C-49EC-9BBA-1844A4174D43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureCosmosDB", "AzureCosmosDB\AzureCosmosDB.csproj", "{D58FB989-75F0-4467-92DE-FC7399546E1C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{6D56219A-2F5C-49EC-9BBA-1844A4174D43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D56219A-2F5C-49EC-9BBA-1844A4174D43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D56219A-2F5C-49EC-9BBA-1844A4174D43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D58FB989-75F0-4467-92DE-FC7399546E1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D58FB989-75F0-4467-92DE-FC7399546E1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D58FB989-75F0-4467-92DE-FC7399546E1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D58FB989-75F0-4467-92DE-FC7399546E1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
